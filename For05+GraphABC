@@ -1,0 +1,15 @@
+{$apptype windows}
+uses GraphABC;
+const n = 10;
+begin
+  SetWindowSize(400, 50);//ширина, высота  
+  var a := ReadlnReal();//стоимость 1 кг конфет
+  var b := a / n;
+  var s := 0.0;
+  for var i := 1 to n do 
+    begin      
+      s += b;
+      Print(s);
+    end;
+end.
+//отличный пример для демонстрации графических возможностей pabcnet
