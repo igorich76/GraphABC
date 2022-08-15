@@ -1,0 +1,10 @@
+{$apptype windows}
+uses graphabc;
+
+begin
+  SetWindowSize(300,200); //ширина, высота
+  //LineTo(200,150); //линия
+  //SetPixel(100,100,clAquamarine); //пиксель
+  DrawCircle(100,100,90); //окружность
+  FloodFill(100,100,clBlack); заливка
+end.
