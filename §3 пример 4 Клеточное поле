@@ -1,0 +1,16 @@
+##
+uses graphabc;
+var x := 50;
+for var i := 0 to 10 do
+  begin
+    Line(x,50,x,350);
+    x += 30;
+  end;
+  //пусть ученики сами допишут:
+var y := 50;
+for var i := 0 to 10 do
+  begin
+    Line(50,y,350,y);
+    y += 30;
+  end;
+  // далее, можно задать окрасить как шахматную доску
