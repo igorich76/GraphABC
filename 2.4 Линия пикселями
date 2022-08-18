@@ -1,0 +1,6 @@
+uses graphabc;
+begin
+  for var x := 1 to 255 do 
+  for var y := 100 to 100 do 
+    SetPixel(x,y,clBlack);    
+end.
