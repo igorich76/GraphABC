@@ -1,0 +1,5 @@
+##
+uses graphabc;
+var (x,y,r) := ReadlnInteger3('Введите координаты окружности (х,y,r)>>');
+Circle(x,y,r);
+FloodFill(x,y,clAquamarine);
