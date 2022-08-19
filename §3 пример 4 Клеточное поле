@@ -14,3 +14,21 @@ for var i := 0 to 10 do
     y += 30;
   end;
   // далее, можно задать окрасить как шахматную доску
+  // можно развить тему - увеличить кол-во клеток + закрасить часть клеток (оценка 3,  4) или все клетки циклом (оценка 5, например).
+##
+uses graphabc;
+var x := 50;
+for var i := 1 to 9 do begin
+  Line(x,50,x,450);
+  x += 50;
+end;{for i}
+var y := 50;
+for var i := 1 to 9 do begin
+  Line(50,y,450,y);
+  y += 50;
+end;{for i}
+var (a,b) := (55,55);
+for var i := 1 to 4 do begin
+  FloodFill(a,b,clBlueViolet);
+  a += 100;
+  end;
