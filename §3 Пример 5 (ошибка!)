@@ -1,0 +1,14 @@
+//не получилась фигура, ошибку не могу найти. Не совсем понял, как получается фигура.
+##
+uses graphabc;
+var (n,x0,y0,r,a) := (5,320,240,150,-Pi/2);
+var (x1,y1) := (x0,y0-r);
+for var i := 1 to 5 do
+  begin
+    a += 2*Pi/n;
+    var x2 := x0+Round(r*Cos(a));
+    var y2 := x0+Round(r*Sin(a));
+    Line(x1,y1,x2,y2);
+    x1 := x2;
+    y1 := y2;
+  end;
