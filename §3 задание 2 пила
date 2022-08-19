@@ -11,3 +11,16 @@ Line(x,y,x+25,y-25);
 x+=25;
 y-=25;
 end;
+/////////////////////
+// уфф, сделал:
+##
+uses graphabc;
+var (x,y) := (100,100);
+for var i:=1 to 8 do begin
+Line(x,y,x+25,y-25);
+x+=25;
+y-=25;
+Line(x,y,x+25,y+25);
+x+=25;
+y+=25;
+end;{for i}
