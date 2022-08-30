@@ -1,0 +1,48 @@
+uses graphABC;
+function F1(x:real):real;
+begin
+F1:=sqr(sin(x));
+end;
+function F2(x:real):real;
+begin
+F2:=0.5-sqr(cos(x));
+end;
+var xn,xk,x,mx,dx:real;
+    x0,y0,my,i:integer;
+    s:string;
+begin
+x0:=windowwidth div 2;{центр экрана}
+y0:=windowheight div 2;
+xn:=-2*pi;xk:=2*pi;{интервал по Х}
+mx:=(x0-30)/xk;{масштаб по Х}
+my:=y0-40;{по У}
+line(0,y0,windowwidth,y0);{оси}
+line(x0,0,X0,windowheight);
+line(x0-3,y0+my,x0+3,y0+my);
+textout(x0-15,y0+my,'-1');
+line(x0-3,y0-my,x0+3,y0-my);
+textout(x0-15,y0-my,'1');
+for i:=1 to trunc(xk)+1 do{максимальное количество засечек в одну сторону}
+  begin
+    line(x0+round(i*mx),y0-3,x0+round(i*mx),Y0+3); {засечки на оси Х}
+    line(x0-round(i*mx),y0-3,x0-round(i*mx),Y0+3);
+    str(i,s);
+    {подпись оси Х}
+    textout(x0+round(i*mx)-15,y0+10,s);
+    textout(x0-round(i*mx),y0+10,'-'+s);
+  end;
+{центр}
+textout(x0+5,y0+10,'0');
+{подписи концов осей}
+textout(windowwidth-10,y0-10,'X');
+textout(x0-10,10, 'Y');
+{графики}
+x:=xn;
+dx:=0.001;
+while x<=xk do
+ begin
+  x:=x+dx; {наращиваем х}
+  setpixel(x0+round(x*mx),y0-round(F1(x)*my),clBlue);
+  setpixel(x0+round(x*mx),y0-round(F2(x)*my),clRed);
+ end;
+end.
