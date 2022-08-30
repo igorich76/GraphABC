@@ -1,0 +1,60 @@
+uses GraphABC; 
+const
+  R1 = 120; 
+  R2 = 50;
+
+var
+  Rotation: real;
+
+begin
+  SetWindowIsFixedSize(true); 
+  SetWindowSize(400, 400);
+  LockDrawing();
+  
+  var CX := Window.Width div 2; 
+  var CY := Window.Height div 2; 
+  
+  while true do 
+  begin
+    for var angle := 0 to 359 do 
+    begin
+      ClearWindow(clBlack); 
+      SetPenColor(clGray); 
+      SetPenWidth(3); 
+      SetPenStyle(GraphABC.DashStyle.DashDot); 
+      DrawCircle(CX, CY, R1); 
+      
+      var angle2 := DegToRad(angle);
+      var x := Trunc(CX + R1 * Cos(angle2)); 
+      var y := Trunc(CY + R1 * Sin(angle2)); 
+      
+      SetPenColor(clRed); 
+      SetPenWidth(2); 
+      SetPenStyle(GraphABC.DashStyle.Solid); 
+      SetBrushColor(clYellow); 
+      FillCircle(x, y, 10); 
+      DrawCircle(x, y, 10); 
+      
+      SetPenColor(clGray); 
+      SetPenWidth(3); 
+      SetPenStyle(GraphABC.DashStyle.DashDot); 
+      DrawCircle(x, y, R2); 
+      
+      angle2 := DegToRad(Rotation);
+      x := Trunc(x + R2 * Cos(angle2)); 
+      y := Trunc(y + R2 * Sin(angle2)); 
+      
+      SetPenColor(clLightCyan); 
+      SetPenWidth(2); 
+      SetPenStyle(GraphABC.DashStyle.Solid); 
+      SetBrushColor(clCyan); 
+      FillCircle(x, y, 6); 
+      DrawCircle(x, y, 6); 
+      
+      if Rotation + 5 < 360 then Rotation := Rotation + 5 else Rotation := 0; 
+      
+      Redraw(); 
+      Sleep(1); 
+    end; 
+  end; 
+end.
