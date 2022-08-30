@@ -1,0 +1,9 @@
+##
+var y, x: integer;
+for var i := 1 to 5 do
+begin
+  Write('Введите точку х', i, '>>');
+  Read(x);
+  y := x * x;
+  Writeln('y', i, '= ', y);  
+end; 
