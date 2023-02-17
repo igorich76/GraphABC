@@ -1,0 +1,19 @@
+##
+uses graphwpf;
+SetmathematicCoords(-30,30);
+Circle(0,0,15,colors.red);
+Circle(0,0,14,colors.green);
+Circle(0,0,13,colors.blue);
+Circle(0,0,12,colors.red);
+Circle(0,0,11,colors.green);
+Circle(0,0,10,colors.blue);
+Circle(0,0,9,colors.red);
+Circle(0,0,8,colors.green);
+Circle(0,0,7,colors.blue);
+Circle(0,0,6,colors.red);
+Circle(0,0,5,colors.green);
+Circle(0,0,4,colors.blue);
+Circle(0,0,3,colors.red);
+Circle(0,0,2,colors.green);
+Circle(0,0,1,colors);
+// идея есть - усовершенствовать - цикл ввести. Радиус и цвет случайка
