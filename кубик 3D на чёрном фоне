@@ -1,0 +1,6 @@
+##
+uses graph3d;
+var myWorld: View3DType;
+myWorld:=View3DType.Create;
+myWorld.BackgroundColor:=GColor.FromRgb(0,0,0);
+var B:=box(0,0,1,2,2,2,gcolor.fromrgb(200,0,0));
