@@ -5,4 +5,5 @@ mir.BackgroundColor:=GColor.FromRgb(0,0,0);
 Sphere(0,0,2,2,Colors.White);
 Sphere(0,0,5,1.5,Colors.White);
 Sphere(0,0,7.2,1.2,Colors.White);
-Cone(-5,-5,0,1,0.2,Colors.Red).RotateAt(OrtX,90,(0,0,3));
+Cone(0,-4,4.2,1,0.2,Colors.Red).RotateAt(OrtX,90,(0,0,3));
+Ellipsoid(0,-3,7,0.3,0.1,0.3,Colors.Black);
