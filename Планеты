@@ -1,0 +1,15 @@
+##
+uses graph3d;
+var mir:=View3DType.Create;
+mir.BackgroundColor:=GColor.FromRgb(0,0,0);
+Window.Title:='Планеты';
+
+Sphere(Origin,2,Colors.Goldenrod);
+var a:=Sphere(0,5,0,1,Colors.Blue);
+
+var tr:=Arr(P3D(1,5,0),P3D(2,4,0),P3D(3,3,0),P3D(4,2,0),P3D(5,1,0),P3D(5,0,0),
+P3D(5,-1,0),P3D(4,-2,0),P3D(3,-3,0),P3D(2,-4,0),P3D(1,-5,0),P3D(0,-5,0),P3D(-1,-5,0),
+P3D(-2,-4,0),P3D(-3,-3,0),P3D(-4,-2,0),P3D(-5,-1,0),P3D(-5,0,0),P3D(-5,1,0),P3D(-4,2,0),
+P3D(-3,3,0),P3D(-2,4,0),P3D(-1,5,0),P3D(0,5,0));
+
+a.AnimMoveTrajectory(tr,3).Forever.Begin;
