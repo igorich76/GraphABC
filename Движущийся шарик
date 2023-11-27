@@ -1,0 +1,10 @@
+## // просто шарик движется
+uses GraphABC, ABCObjects;
+Window.Title := 'Движущийся шарик';
+var (x,y,r) := (50,100,20);
+var ball := new CircleABC(x,y,r,clred);
+repeat
+  x += 3;
+  ball.MoveTo(x,y);
+  Sleep(1);
+until x > 600;
